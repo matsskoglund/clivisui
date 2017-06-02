@@ -1,0 +1,9 @@
+C:\Users\mskvb0\dev\clivisui\bin\Debug\netcoreapp1.1\Clivisui.deps.json
+C:\Users\mskvb0\dev\clivisui\bin\Debug\netcoreapp1.1\Clivisui.runtimeconfig.json
+C:\Users\mskvb0\dev\clivisui\bin\Debug\netcoreapp1.1\Clivisui.runtimeconfig.dev.json
+C:\Users\mskvb0\dev\clivisui\bin\Debug\netcoreapp1.1\Clivisui.dll
+C:\Users\mskvb0\dev\clivisui\bin\Debug\netcoreapp1.1\Clivisui.pdb
+C:\Users\mskvb0\dev\clivisui\obj\Debug\netcoreapp1.1\clivisui.AssemblyInfo.cs
+C:\Users\mskvb0\dev\clivisui\obj\Debug\netcoreapp1.1\Clivisui.dll
+C:\Users\mskvb0\dev\clivisui\obj\Debug\netcoreapp1.1\Clivisui.pdb
+C:\Users\mskvb0\dev\clivisui\obj\Debug\netcoreapp1.1\clivisui.csprojResolveAssemblyReference.cache

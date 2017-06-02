@@ -1,0 +1,81 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\mskvb0\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower' ]
+2 info using npm@4.0.3
+3 info using node@v6.10.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData bower
+8 silly fetchNamedPackageData bower
+9 silly mapToRegistry name bower
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'bower',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'bower',
+12 silly mapToRegistry   name: 'bower',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/bower
+14 verbose request uri https://registry.npmjs.org/bower
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 08:28:30
+17 verbose request id cb4e2f7d42d71de1
+18 http request GET https://registry.npmjs.org/bower
+19 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:794:
+20 info attempt registry request try #2 at 08:28:40
+21 http request GET https://registry.npmjs.org/bower
+22 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:794:
+23 info attempt registry request try #3 at 08:29:40
+24 http request GET https://registry.npmjs.org/bower
+25 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:794:
+25 silly fetchPackageMetaData
+25 silly fetchPackageMetaData     at ClientRequest.onError (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+25 silly fetchPackageMetaData     at ClientRequest.g (events.js:292:16)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at ClientRequest.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at TLSSocket.socketErrorListener (_http_client.js:309:9)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at TLSSocket.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at onwriteError (_stream_writable.js:343:10)
+25 silly fetchPackageMetaData     at onwrite (_stream_writable.js:361:5)
+25 silly fetchPackageMetaData     at WritableState.onwrite (_stream_writable.js:90:5)
+25 silly fetchPackageMetaData  error for bower { Error: tunneling socket could not be established, cause=write EPROTO 101057795:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:openssl\ssl\s23_clnt.c:794:
+25 silly fetchPackageMetaData
+25 silly fetchPackageMetaData     at ClientRequest.onError (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+25 silly fetchPackageMetaData     at ClientRequest.g (events.js:292:16)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at ClientRequest.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at TLSSocket.socketErrorListener (_http_client.js:309:9)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at TLSSocket.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at onwriteError (_stream_writable.js:343:10)
+25 silly fetchPackageMetaData     at onwrite (_stream_writable.js:361:5)
+25 silly fetchPackageMetaData     at WritableState.onwrite (_stream_writable.js:90:5) code: 'ECONNRESET' }
+26 silly rollbackFailedOptional Starting
+27 verbose stack TypeError: Cannot read property 'path' of null
+27 verbose stack     at Object.Installer.rollbackFailedOptional (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\lib\install.js:505:29)
+27 verbose stack     at Array.<anonymous> (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+27 verbose stack     at LOOP (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+27 verbose stack     at C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\chain.js:18:7
+27 verbose stack     at C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\lib\install.js:331:5
+27 verbose stack     at Array.<anonymous> (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+27 verbose stack     at LOOP (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+27 verbose stack     at chain (C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+27 verbose stack     at C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\lib\install.js:288:5
+27 verbose stack     at C:\Users\mskvb0\AppData\Roaming\npm\node_modules\npm\node_modules\slide\lib\chain.js:16:22
+28 verbose cwd C:\Users\mskvb0\dev\clivisui
+29 error Windows_NT 6.1.7601
+30 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\mskvb0\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "bower"
+31 error node v6.10.3
+32 error npm  v4.0.3
+33 error Cannot read property 'path' of null
+34 error If you need help, you may report this error at:
+34 error     <https://github.com/npm/npm/issues>
+35 verbose exit [ 1, true ]

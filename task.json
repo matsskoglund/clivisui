@@ -1,0 +1,18 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "Clivisui",
+      "image": "766470935727.dkr.ecr.eu-west-1.amazonaws.com/matsskoglund/clivisui:latest",
+      "cpu": 10,
+      "memory": 128,
+      "essential": true,"portMappings": [
+        {
+          "hostPort": 0,
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "family": "Clivisui"
+}

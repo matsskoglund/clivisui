@@ -1,0 +1,19 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "mskvb0-clivisui",
+      "image": "644569545355.dkr.ecr.eu-west-1.amazonaws.com/mskvb0-clivisui",
+      "cpu": 10,
+      "memory": 300,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "family": "mskvb0-clivisui"
+}

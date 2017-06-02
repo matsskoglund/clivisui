@@ -1,0 +1,178 @@
+@{
+    ViewData["Title"] = "Netatmo";
+}
+<br>
+<center>
+    <canvas id="myCanvas" width="850" height="900" style="border:0px solid #000000;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+<script>
+var c = document.getElementById("myCanvas");
+
+var ctx = c.getContext("2d");
+ctx.font = "160px Arial";
+
+// Backdrop
+ctx.beginPath();
+deltaXB = 180;
+deltaYB = 30;
+ctx.moveTo(0 + deltaXB,300 + deltaYB);
+ctx.lineTo(300+deltaXB,0  +  deltaYB);
+ctx.lineTo(600+deltaXB,300 +  deltaYB);
+ctx.lineTo(560+deltaXB,300 +  deltaYB);
+ctx.lineTo(560+deltaXB,700 +  deltaYB);
+ctx.lineTo(40+deltaXB,700 +  deltaYB);
+ctx.lineTo(40+deltaXB,300 +  deltaYB);
+ctx.lineTo(0+deltaXB,300 +  deltaYB);
+
+ctx.stroke();
+// Fill
+var grd=ctx.createLinearGradient(900,700,300,200);
+var indoor = parseFloat(@ViewData["NetatmoIndoor"]).toFixed(1);
+var outdoor= parseFloat(@ViewData["NetatmoOutdoor"]).toFixed(1);
+
+if (outdoor > 24) {
+    grd.addColorStop(1, "crimson");
+} else if ((outdoor <= 24) && (outdoor > 15)) {
+    grd.addColorStop(1, "green");
+} else if ((outdoor <= 15) && (outdoor > 0)) {
+    grd.addColorStop(1, "PaleTurquoise");
+} else if ((outdoor <= 0) && (outdoor > -5)) {
+    grd.addColorStop(1, "LightSkyBlue");
+} else if ((outdoor <= -5) && (outdoor > -10)) {
+    grd.addColorStop(1, "cyan");
+} else {
+    grd.addColorStop(1, "DodgerBlue");
+}
+
+if (indoor > 24) {
+    grd.addColorStop(0, "Crimson");
+} else if ((indoor <=24) && (indoor > 21.5)){
+    grd.addColorStop(0, "green");
+} else if ((indoor <= 21.5) && (indoor > 19.5)) {
+    grd.addColorStop(0, "lightgreen");
+} else if ((indoor <= 19.5) && (indoor > 17)) {
+    grd.addColorStop(0, "LightSkyBlue");
+} else {
+    grd.addColorStop(0, "RoyalBlue");
+}
+
+ctx.fillStyle=grd;
+ctx.fill();
+
+// Foreground
+//ctx.beginPath();
+deltaX = 100;
+deltaY = 70;
+    
+// Connect
+// Fyll H�gerv�ggen
+ctx.beginPath();
+// Takutspr�ng
+ctx.moveTo(560+deltaXB,300 +  deltaYB);
+
+// H�gerv�gg Backdrop
+// H�gerv�gg
+ctx.lineTo(560+deltaXB,700 +  deltaYB);
+
+// �ver till f�rgrund
+ctx.lineTo(560+deltaX,700 +  deltaY);
+
+// H�gerv�gg f�rgrund
+ctx.lineTo(560+deltaX,300 +  deltaY);
+
+// �ver till Backdrop
+ctx.lineTo(600+deltaXB,300 +  deltaYB);
+
+ctx.stroke();
+ctx.fill();
+
+ctx.beginPath();
+
+//Tak
+ctx.moveTo(300+deltaXB,0  +  deltaYB);
+
+
+// Tak
+ctx.lineTo(600+deltaXB,300 +  deltaYB);
+
+// �ver till f�rgrund
+ctx.lineTo(600+deltaX,300 +  deltaY);
+
+// Tak
+ctx.lineTo(300+deltaX,0  +  deltaY);
+
+// �ver till startpunkt
+ctx.lineTo(300+deltaXB,0 +  deltaYB);
+
+ctx.stroke();
+
+
+// f�rgrund
+
+// Tak
+ctx.moveTo(0 + deltaX,300 +  deltaY);
+ctx.lineTo(300+deltaX,0  +  deltaY);
+ctx.lineTo(600+deltaX,300 +  deltaY);
+ctx.fill();
+
+// Takutspr�ng
+ctx.lineTo(560+deltaX,300 +  deltaY);
+
+// H�gerv�gg
+ctx.lineTo(560+deltaX,700 +  deltaY);
+
+//Golv
+ctx.lineTo(40+deltaX,700 +  deltaY);
+
+// V�nsterv�gg
+ctx.lineTo(40+deltaX,300 +  deltaY);
+
+// V�nster takutspr�ng
+ctx.lineTo(0+deltaX,300 +  deltaY);
+
+ctx.stroke();
+ctx.fill();
+
+
+// Skorsten
+ctx.beginPath();
+ctx.moveTo(400+deltaX,40+deltaY);
+ctx.lineTo(400+deltaX,-30 +  deltaY);
+ctx.lineTo(450+deltaX,-30 +  deltaY);
+ctx.lineTo(450+deltaX,80 +  deltaY);
+ctx.stroke();
+ctx.fill();
+    
+ctx.beginPath();
+ctx.moveTo(380+deltaX,50+deltaY);
+ctx.lineTo(380+deltaX,-20 +  deltaY);
+ctx.lineTo(430+deltaX,-20 +  deltaY);
+ctx.lineTo(430+deltaX,90 +  deltaY);
+ctx.stroke();
+ctx.fill();
+
+// Topp
+ctx.beginPath();
+ctx.moveTo(380+deltaX,-20+deltaY);
+ctx.lineTo(400+deltaX,-30 +  deltaY);
+ctx.lineTo(450+deltaX,-30 +  deltaY);
+ctx.lineTo(430+deltaX,-20 +  deltaY);
+ctx.lineTo(380+deltaX,-20 +  deltaY);
+
+ctx.stroke();
+ctx.fill();
+
+    // H�r
+
+ctx.moveTo(600 + deltaX,300 + deltaY);
+ctx.lineTo(300+deltaX,deltaY);
+ctx.stroke();
+ctx.fillStyle="#000000";
+
+
+
+ctx.fillText(outdoor,100,130);
+//ctx.fillStyle="#FFFFFF";
+ctx.fillText(indoor,250,575);
+</script></center>

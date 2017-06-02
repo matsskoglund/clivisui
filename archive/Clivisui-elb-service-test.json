@@ -1,0 +1,13 @@
+{
+    "serviceName": "Clivisui-elb-service-test",
+    "taskDefinition": "Clivisui-test",
+    "loadBalancers": [
+        {
+            "loadBalancerName": "clivisui-elb-test",
+            "containerName": "Clivisui-test",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 2,
+    "role": "arn:aws:iam::766470935727:role/ecsServiceRole"
+}

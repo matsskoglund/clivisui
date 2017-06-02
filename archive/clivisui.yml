@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  clivis:
+    image: clivisui
+    mem_limit: 300000000
+    ports:
+      - "80:80"
